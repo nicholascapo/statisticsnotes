@@ -5,6 +5,7 @@
 \usepackage{appendix}
 \usepackage{float}
 \usepackage{amsfonts}
+\usepackage{amsmath}
 \usepackage[american]{babel}
 \usepackage[hyperref=true, backref=true, backend=bibtex8]{biblatex}
 \usepackage{csquotes}
@@ -18,13 +19,63 @@
 \date{\today}
 \title{Statistics Class Notes}
 
+\bibliography{textbook}
+
 \begin{document}
 \maketitle
 \newpage
 \tableofcontents
 \newpage
 
-\section{}
+\subsection{Definition of Statistics}
 
+\enquote{Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.}
+
+\section{Data}
+
+\subsection{Data Sets}
+\begin{description}
+\item[Population] The collection of all outcomes, responses, measurements, or counts, that are of interest.
+
+\item[Sample] A subset of the population.
+
+\item[Parameter] A number that describes a population characteristic.
+
+\item[Statistic] A number that describes a sample characteristic.
+\end{description}
+
+\subsection{Types of Data}
+
+\begin{description}
+\item[Qualitative Data] Attributes, labels, or non-numerical entries.
+
+\item[Quantitative Data] Numerical measurements or counts.
+\end{description}
+
+\section{Sample Mean and Median}
+
+\subsection{Definition}
+\begin{description}
+\item[Sample Mean] The average of the sample data points, however it may not be a data point.
+$$\overline{x} = \sum_{i=1}^n\frac{x_i}{n} = \frac{x_1+x_2+x_3\cdots x_n}{n}$$
+\item[Sample Median] The middle value of the data.
+
+$$\tilde{x}=\left\{
+\begin{matrix}
+x+\frac{(x_{n+1})}{2} & \text{if n is odd}\\
+\frac{1}{2}(x_{n-2}+x_{\frac{n}{2}+1}) & \text{if n is even}
+\end{matrix}
+\right.$$
+
+\item[Trimmed Mean] A trimmed mean is computed by trimming off the largest and smallest set of values. For example a 10\% trimmed mean is found by eliminating the largest 10\% and smallest 10\% and computing the mean of the remaining values. This may be useful for data that contains possible outliers. Denoted by $x_{tr(\text{percent})}$
+\end{description}
+
+\section{Homework}
+p. 13 \#'s 1.5, 1.6
+p.17 \#'s 1.11, 1.12
+
+\newpage
+\nocite{textbook}
+\printbibliography
 
 \end{document}
