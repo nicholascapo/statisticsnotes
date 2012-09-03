@@ -70,9 +70,71 @@ x+\frac{(x_{n+1})}{2} & \text{if n is odd}\\
 \item[Trimmed Mean] A trimmed mean is computed by trimming off the largest and smallest set of values. For example a 10\% trimmed mean is found by eliminating the largest 10\% and smallest 10\% and computing the mean of the remaining values. This may be useful for data that contains possible outliers. Denoted by $x_{tr(\text{percent})}$
 \end{description}
 
+\section{Measures of Variability}
+
+\subsection{Standard Deviation}
+
+\subsubsection{Sample Variance}
+
+$$s^2 = \sum_{i=1}^n \frac{(x_i - \overline{x})^2}{n-1}$$
+
+\subsubsection{Sample Standard Deviation}
+
+$$s=+\sqrt{s^2}$$
+
+The standard deviation is $0$ when all the data points are the same.
+
+\section{Descriptive Statistics}
+
+\subsection{Quartiles}
+
+Quartiles approximately divide an ordered data set into four equal parts.
+
+\begin{description}
+\item[First Quartile, $Q_1$]
+About $25\%$ of the data fall on or below $Q_1$
+\item[Second Quartile, $Q_2$]
+About $50\%$ of the data fall on or below $Q_2$
+\item[Third Quartile, $Q_3$]
+About $75\%$ of the data fall on or below $Q_3$
+\end{description}
+
+\subsection{Range and Interquartile Range}
+
+\subsubsection{Range}
+
+$$\text{range} = \text{max value} - \text{min value}$$
+
+\subsubsection{Interquartile Range}
+
+$$IQR=Q_3 - Q_1$$
+
+To help find outliers, compute $1.5 \times IQR$, and any values that lie outside the interval $[Q_1-1.5 \times IQR, Q_3+1.5 \times IQR]$ is a possible (and probable) outlier.
+
+\subsection{Box and Whisker Plot}
+
+Exploratory Data Analysis Tool
+
+\begin{itemize}
+\item Requires
+	\begin{itemize}
+	\item Min
+	\item $Q_1$
+	\item Median
+	\item $Q_3$
+	\item Max
+	\end{itemize}
+\end{itemize}
+
+
+
 \section{Homework}
-p. 13 \#'s 1.5, 1.6
-p.17 \#'s 1.11, 1.12
+\begin{itemize}
+\item p. 13 \#'s 1.5, 1.6
+\item p. 17 \#'s 1.11, 1.12
+\item p. 31 \#'s 1.18, 1.19, 1.20, 1.29, 1.30
+\end{itemize}
+
 
 \newpage
 \nocite{textbook}
