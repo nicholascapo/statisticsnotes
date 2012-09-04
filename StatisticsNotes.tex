@@ -7,6 +7,8 @@
 \usepackage{amsfonts}
 \usepackage{amsmath}
 \usepackage[american]{babel}
+\usepackage{pythontex}
+\usepackage{graphicx}
 \usepackage[hyperref=true, backref=true, backend=bibtex8]{biblatex}
 \usepackage{csquotes}
 \usepackage[pdftex, pdfusetitle, colorlinks, 
@@ -62,8 +64,8 @@ $$\overline{x} = \sum_{i=1}^n\frac{x_i}{n} = \frac{x_1+x_2+x_3\cdots x_n}{n}$$
 
 $$\tilde{x}=\left\{
 \begin{matrix}
-x+\frac{(x_{n+1})}{2} & \text{if n is odd}\\
-\frac{1}{2}(x_{n-2}+x_{\frac{n}{2}+1}) & \text{if n is even}
+x_{(\frac{n+1}{2})} & \text{if $n$ is odd}\\
+\frac{1}{2}(x_{\frac{n}{2}}+x_{\frac{n}{2}+1}) & \text{if $n$ is even}
 \end{matrix}
 \right.$$
 
@@ -126,7 +128,19 @@ Exploratory Data Analysis Tool
 	\end{itemize}
 \end{itemize}
 
+\begin{pycode}
+import pylab
+data = [1, 2, 3, 4, 5, 6, 11]
+pylab.figure(figsize=(5,3))
+pylab.boxplot(data, vert=0, sym='bx')
+pylab.savefig('whiskerplot.pdf', bbox_inches='tight', orientation='landscape')
+\end{pycode}
 
+\subsubsection{Example}
+Example Data: \pyc{print(data)}
+\begin{center}
+\includegraphics{whiskerplot}
+\end{center}
 
 \section{Homework}
 \begin{itemize}
