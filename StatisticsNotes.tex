@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage{setspace}
 \usepackage{listings}
@@ -19,7 +19,7 @@
 
 \author{Nicholas Capo}
 \date{\today}
-\title{Statistics Class Notes}
+\title{\textsc{Class Notes\\ for\\ Elementary Statistics\\ LETU MATH-1423}}
 
 \bibliography{textbook}
 
@@ -29,9 +29,35 @@
 \tableofcontents
 \newpage
 
-\subsection{Definition of Statistics}
+\section*{}
+\begin{center}
+\begin{large}
+This document comprises classroom notes from Statistics Class at \href{letu.edu}{LeTourneau University}, in the Fall of 2012.
 
+\vspace{10pt}
+
+Although the author will attempt to be complete and correct in these notes, it is the readers responsibility to learn and understand the material. The author assumes no responsibility for the completeness or accuracy of this content. 
+
+\vspace{10pt}
+
+The latest version of this document is available at \url{https://bitbucket.org/nicholascapo/StasisticsNotes/src/tip/StatisticsNotes.pdf}
+\end{large}
+\end{center}
+
+\vfill
+\begin{tabular}{c}
+Copyright \copyright\ 2012 Nicholas Capo\\
+Licensed under a {Creative Commons Attribution-ShareAlike 3.0 Unported}\\
+\url{creativecommons.org/licenses/by-sa/3.0/}\\
+\end{tabular}
+
+
+\chapter{Introduction}
+
+\begin{center}
+\textbf{Definition of Statistics}\\
 \enquote{Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.}
+\end{center}
 
 \section{Data}
 
@@ -131,16 +157,91 @@ Exploratory Data Analysis Tool
 \begin{pycode}
 import pylab
 data = [1, 2, 3, 4, 5, 6, 11]
-pylab.figure(figsize=(5,3))
+pylab.figure(figsize=(5,2))
 pylab.boxplot(data, vert=0, sym='bx')
 pylab.savefig('whiskerplot.pdf', bbox_inches='tight', orientation='landscape')
+sdata = sorted(data)
+min = sdata[0]
+outlier = sdata[-1]
+max = sdata[-2]
+median = pylab.median(sdata)
+
 \end{pycode}
 
 \subsubsection{Example}
-Example Data: \pyc{print(data)}
+
+\begin{tabular}{ll}
+Example Data &\py{data}\\
+Min &\py{min}\\
+Median & \py{median}\\
+Max & \py{max}\\
+Outlier & \py{outlier}\\
+\end{tabular}
+
+
+\begin{figure}[H]
 \begin{center}
-\includegraphics{whiskerplot}
+\includegraphics[width=.75\textwidth]{whiskerplot}
 \end{center}
+\caption{Example Box And Whisker Plot}
+\end{figure}
+
+\section{Stem and Leaf Plots}
+
+These look like a sideways histogram
+
+Data: \py{[31, 21, 32, 33, 41, 42, 58, 25, 21]}\\
+
+\begin{tabular}{r|ll}
+Stem & Leaf & Key: $a|b=ab$\\
+\hline
+2&1,1,5\\
+3&1,2,3\\
+4&1,2\\
+5&8\\
+\end{tabular}
+
+\subsection{Key Notation}
+
+Key: 4|5 = 45
+Key: 4|5 = 4.5
+
+\subsection{Double Stem and Leaf}
+
+Separate the leaves into two groups, (0-4, and 5-9)
+
+Data: \py{[31, 21, 32, 33, 41, 42, 58, 25, 21]}\\
+
+\begin{tabular}{r|ll}
+Stem & Leaf & Key: $a|b=ab$\\
+\hline
+2&1,1\\
+2&5\\
+3&1,2,3\\
+4&1.2\\
+4&\\
+5&\\
+5&8\\
+\end{tabular}
+
+\section{Frequency Distribution}
+A table that shows classes or intervals of data with a count of the number of entries in each class.
+
+\subsection{Midpoint of a Class}
+Average of the class limits.
+$$\frac{(\text{lower class limit})+(\text{upper class limit})}{2}$$
+
+\subsection{Relative Frequency}
+$$\frac{\text{class frequency}}{\text{sample size}}=\frac{f}{n}$$
+
+\section{Scatter Plots}
+Each entry in one data set corresponds to one entry in a second set, one-to-one mapping.
+
+%% TODO Insert example scatter-plot from homework
+
+
+
+
 
 \section{Homework}
 \begin{itemize}
