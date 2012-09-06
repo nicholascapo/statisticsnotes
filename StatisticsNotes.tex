@@ -1,4 +1,4 @@
-\documentclass{book}
+\documentclass{article}
 
 \usepackage{setspace}
 \usepackage{listings}
@@ -29,9 +29,8 @@
 \tableofcontents
 \newpage
 
-\section*{}
+\begin{abstract}
 \begin{center}
-\begin{large}
 This document comprises classroom notes from Statistics Class at \href{letu.edu}{LeTourneau University}, in the Fall of 2012.
 
 \vspace{10pt}
@@ -40,20 +39,19 @@ Although the author will attempt to be complete and correct in these notes, it i
 
 \vspace{10pt}
 
-The latest version of this document is available at \url{https://bitbucket.org/nicholascapo/StasisticsNotes/src/tip/StatisticsNotes.pdf}
-\end{large}
+The latest version of this document and the \LaTeX\ sourcecode is available at:\\ \url{https://bitbucket.org/nicholascapo/statisticsnotes/src/tip/StatisticsNotes.pdf}
 \end{center}
 
 \vfill
 \begin{tabular}{c}
 Copyright \copyright\ 2012 Nicholas Capo\\
 Licensed under a {Creative Commons Attribution-ShareAlike 3.0 Unported}\\
-\url{creativecommons.org/licenses/by-sa/3.0/}\\
+\url{http://creativecommons.org/licenses/by-sa/3.0/}\\
 \end{tabular}
+\end{abstract}
 
 
-\chapter{Introduction}
-
+\newpage
 \begin{center}
 \textbf{Definition of Statistics}\\
 \enquote{Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.}
@@ -237,17 +235,45 @@ $$\frac{\text{class frequency}}{\text{sample size}}=\frac{f}{n}$$
 \section{Scatter Plots}
 Each entry in one data set corresponds to one entry in a second set, one-to-one mapping.
 
-%% TODO Insert example scatter-plot from homework
+\subsection{Example Scatter Plot}
 
+\begin{pycode}
+import pylab
+import random
+count = 12
+data = []
+for i in range(count): data.append(random.randint(1, count))
+x = range(1, count+1)
+
+pylab.figure(figsize=(5, 5))
+
+pylab.scatter(x, data, label='(X,Y)')
+
+pylab.legend()
+pylab.savefig('scatter.pdf', orientation='landscape')
+\end{pycode}
+
+\begin{tabular}{ll}
+Data:&\\
+X: & \texttt{\py{x}}\\
+Y: & \texttt{\py{data}}\\
+\end{tabular}
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=.75\textwidth]{scatter}
+\end{center}
+\caption{Example Scatter Plot}
+\end{figure}
 
 
 
 
 \section{Homework}
 \begin{itemize}
-\item p. 13 \#'s 1.5, 1.6
-\item p. 17 \#'s 1.11, 1.12
-\item p. 31 \#'s 1.18, 1.19, 1.20, 1.29, 1.30
+\item Page 13 \#'s 1.5, 1.6
+\item Page 17 \#'s 1.11, 1.12
+\item Page 31 \#'s 1.18, 1.19, 1.20, 1.29, 1.30
 \end{itemize}
 
 
