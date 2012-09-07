@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{book}
 
 \usepackage{setspace}
 \usepackage{listings}
@@ -21,21 +21,20 @@
 
 \bibliography{../textbook}
 
-\title{\textsc{Class Notes\\ for \\ Elementary Statistics\\ \large LETU MATH--1423}}
-\author{Nicholas Capo}
+\title{\textsc{Class Notes\\ for \\ Elementary Statistics\\ Letu Math--1423}}
+\author{Nicholas Capo \\ \href{mailto:nicholas.capo@gmail.com}{nicholas.capo@gmail.com}}
 \date{\today\\ \currenttime}
 
 \bibliography{textbook}
 
 \begin{document}
 \maketitle
-\newpage
 \tableofcontents
-\newpage
+\pagebreak
 
-\begin{abstract}
+\section*{}
 \begin{center}
-This document comprises classroom notes from Statistics Class at \href{letu.edu}{LeTourneau University}, in the Fall of 2012.
+This document comprises classroom notes from Statistics Class\\ at \href{letu.edu}{LeTourneau University}, in the Fall of 2012.
 
 \vspace{10pt}
 
@@ -43,7 +42,7 @@ Although the author will attempt to be complete and correct in these notes, it i
 
 \vspace{10pt}
 
-The latest version of this document and the \LaTeX\ sourcecode is available at:\\ \url{https://bitbucket.org/nicholascapo/statisticsnotes/src/tip/StatisticsNotes.pdf}
+The latest version of this document is available at:\\ \url{https://bitbucket.org/nicholascapo/statisticsnotes/src/tip/StatisticsNotes.pdf}
 \end{center}
 
 \vfill
@@ -52,10 +51,10 @@ Copyright \copyright\ 2012 Nicholas Capo\\
 Licensed under a {Creative Commons Attribution-ShareAlike 3.0 Unported}\\
 \url{http://creativecommons.org/licenses/by-sa/3.0/}\\
 \end{tabular}
-\end{abstract}
 
 
 \newpage
+\chapter{Introduction}
 \begin{center}
 \textbf{Definition of Statistics}\\
 \enquote{Statistics is the science of collecting, organizing, analyzing, and interpreting data in order to make decisions.}
@@ -270,9 +269,6 @@ Y: & \texttt{\py{data}}\\
 \caption{Example Scatter Plot}
 \end{figure}
 
-
-
-
 \section{Homework}
 \begin{itemize}
 \item Page 13 \#'s 1.5, 1.6
@@ -280,7 +276,45 @@ Y: & \texttt{\py{data}}\\
 \item Page 31 \#'s 1.18, 1.19, 1.20, 1.29, 1.30
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Probability}
 
+\section{Experiments}
+Any process that generates a set of data.
+
+\section{Sample Space}
+The set of all possible outcomes of a statistical experiment, denoted $S$. The sample space with no elements is the empty set or null set, denoted $\emptyset$
+
+\subsection{Example}
+
+$$S = \{ 3, 2, 1, 0\}$$
+$$S = \{ x | 0 < x < 25 \}$$
+$$S= \{ x^2 | x \in \mathbb{R}\}$$
+
+\subsection{Tree Diagrams}
+A Tree Diagram can be used to list all possible outcomes
+
+\subsection{Events}
+An event is a subset of a sample space. The null set ($\emptyset$) and the sample space ($S$) are both subsets of the sample space $S$.
+
+\subsubsection{Intersection}
+The intersection of two events $A$ and $B$, denoted $A \cap B$, is the event containing all elements that are common to $A$ and $B$. If $A \cap B = \emptyset$ than $A$ and $B$ are called mutually exclusive or disjoint.
+
+\subsubsection{Union}
+The union of two events $A$ and $B$, denoted $A \cup B$, is the event containing all elements that belong to $A$ or $B$ or both.
+
+\subsubsection{Compliment}
+The compliment of an event $A$ with respect to $S$ is a subset of all elements of $S$ not in $A$, denoted $A'$
+
+\section{Homework}
+\begin{itemize}
+\item Page 42 \#'s 2.3, 2.6, 2.10, 2.11, 2.14, 2.16, 2.18
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \nocite{textbook}
 \printbibliography
