@@ -30,8 +30,6 @@
 
 \begin{document}
 \maketitle
-\tableofcontents
-\pagebreak
 
 \section*{}
 \begin{center}
@@ -57,8 +55,10 @@ Licensed under a {Creative Commons Attribution-ShareAlike 3.0 Unported}\\
 \url{http://creativecommons.org/licenses/by-sa/3.0/}\\
 \end{tabular}
 
+%%%%%%%%%%%
+\tableofcontents
+%%%%%%%%%%%
 
-\newpage
 \chapter{Introduction}
 \begin{center}
 \textbf{Definition of Statistics}\\
@@ -255,7 +255,7 @@ x = range(1, count+1)
 
 pylab.figure(figsize=(5, 5))
 
-pylab.scatter(x, data, label='(X,Y)')
+pylab.scatter(x, data, label='$(x, y)$')
 
 pylab.legend()
 pylab.savefig('scatter.pdf', orientation='landscape')
@@ -340,17 +340,47 @@ $$\frac{n!}{n_1!n_2! \cdots n_k!}$$
 \subsection{Partitioning}
 The number of way of partitioning a set of $n$ objects into $k$ cells with $n_1$ elements in the first cell, $n_2$ elements in the second cell, and so forth, is
 $$ {n \choose n_1, n_2, \ldots , n_k }= \frac{n!}{n_1!n_2! \cdots n_k!}$$
+Where $n_1+n_2+\cdots+n_k = n$
 
 Notice that this is the same as the last example.
 
+\subsection{Combinations}
+
+The number of combinations of $n$ distinct object taken $r$ at a time, is:
+$${}_nC_r={n \choose r} = \frac{n!}{r!(n-r)!}$$
+This is partitioning with only two cells.
+
+\subsection{Partitioning and Combinations}
+
+Note that:
+
+$$ {10 \choose 5, 4, 1} = {10 \choose 5} {5 \choose 4} {1 \choose 1}$$
 
 
+%%%%%%%%%
+\section{Probability of an Event}
+
+The probability of an event $A$ is the sum of the weifhts of all sample points on $A$. Therefore $$0 \le P(A) \le 1$$ $$P(\emptyset)=0$$ $$P(S)=1$$
+
+Furthermore, if $A_1, A_2, \cdots$ is a set of mutually exclusive events, then $$P(A_1 \cup A_2 \cup \cdots)=P(A_1)+P(A_2)+\cdots$$
+
+\subsection{Complimentary Probability}
+If $A$ and $A'$ are complimentary events, then $$P(A)+P(A')=1$$
+
+\subsection{Different Outcomes}
+
+If an experiment can result in any one of $N$ different equally likely outcomes, and of exactly $n$ of those outcomes correspond to event $A$, the probability of event $A$ is $$P(A) = \frac{n}{N}$$
+
+
+%%%%%%%%%
 \section{Homework}
 \label{Chapter 2 Homework}
 \begin{itemize}
 \item Page 42 \#'s 2.3, 2.6, 2.10, 2.11, 2.14, 2.16, 2.18
 \item Page 51 \#'s 2.24, 2.25, 2.28, 2.29, 2.30, 2.33, 2.34, 2.38, 2.39, 2.40, 2.44, 2.46, 2.47, 2.48
+\item Page 59 \#'s 2.52, 2.53, 2.56, 2.57, 2.58, 2.62, 2.67, 2.70
 \end{itemize}
+
 
 
 
