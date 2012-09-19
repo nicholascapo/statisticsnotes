@@ -28,6 +28,9 @@
 
 \bibliography{textbook}
 
+\newcommand{\note}[1]{\marginpar{\emph{Note: #1}}}
+
+%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
 
@@ -327,7 +330,7 @@ A permutation is an arrangement of all or a part of a set objects. For permutati
 \subsection{Permutations at a Time}
 The number of permutations of $n$ distinct objects taken $r$ at a time is
 $${}_nP_r = \frac{n!}{(n-r)!}$$
-This is called \enquote{$n$ Permute $r$}
+\note{This is called \enquote{$n$ Permute $r$}}
 
 \subsection{Permutations in a Circle}
 The number of permutations of $n$ objects arranged in a circle is $(n-1)!$.
@@ -342,13 +345,13 @@ The number of way of partitioning a set of $n$ objects into $k$ cells with $n_1$
 $$ {n \choose n_1, n_2, \ldots , n_k }= \frac{n!}{n_1!n_2! \cdots n_k!}$$
 Where $n_1+n_2+\cdots+n_k = n$
 
-Notice that this is the same as the last example.
+\note{This is the same as the last example}
 
 \subsection{Combinations}
 
 The number of combinations of $n$ distinct object taken $r$ at a time, is:
 $${}_nC_r={n \choose r} = \frac{n!}{r!(n-r)!}$$
-This is partitioning with only two cells.
+\note{This is partitioning with only two cells}
 
 \subsection{Partitioning and Combinations}
 
@@ -386,17 +389,47 @@ $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
 \section{Conditional Probability}
 
-The conditional probability of $B$ given $A$, denoted $P(B|A)$ id defined by $$P(B|A) = \frac{P(A \cap B)}{P(A)}, P(A) \ne 0 $$
-This is a filter.
+The conditional probability of $B$ given $A$, denoted $P(B|A)$ is defined as $$P(B|A) = \frac{P(A \cap B)}{P(A)} \text{, where } P(A) \ne 0 $$
+\note{This is a filter}
 
 \subsubsection{Alternate Notation}
 $$P(A|B) =\frac{n(A \cap B)}{n(B)}$$
-Where $n(B)$ is defined as \enquote{number of} 
+Where $n(x)$ is defined as \enquote{the number of elements in $x$} 
+
+\subsection{Multiplication Rule}
+If in an experiment the events $A$ and $B$ can both occur, then $$P(A\cap B) = P(A)P(B|A)\text{, provided } P(A) > 0$$
+
+\subsection{Independent Events}
+Two events $A$ and $B$ are \emph{independent} if and only if 
+$$P(B|A) = P(B) \text{ or } P(A|B)=P(A)$$
+Assuming the existence of the conditional probabilities. Otherwise, $A$ and $B$ are dependent.
+
+\note{Independence does not imply Mutual Exclusivity!}
+
+\subsection{Corollary}
+Two events $A$ and $B$ are \emph{independent} if and only if 
+$$P(A \cap B) = P(A)P(B)$$
+
+Therefore, to obtain the probability that two independent events will occur, we simply find the product of their individual probabilities.
+
+\subsection{Compliments of Independent Events}
+If $A$ and $B$ are independent events so are the complements of these events, this means that: 
+\begin{itemize}
+\item $A'$ and $B'$ are independent
+\item $A'$ and $B$  are independent
+\item $A$ and $B'$ are independent
+\end{itemize}
+\note{Also $P(A'|B) = 1 - P(A|B)$ (no need for independence)}
+
+\subsection{Extended Multiplication for Conditional Probability}
+If, in an experiment, the events $A_1, A_2 \cdots A_k$ can occur, then
+$$P(A_1 \cap A_2 \cap \cdots \cap A_k) = P(A_1) \times P(A_2|A_1) \times P(A_3|A_1 \cap A_2) \times \cdots \times P(A_k |  A_1 \cap A_2 \cap \cdots \cap A_{k-1})$$
 
 \section{Homework}
 \begin{itemize}
 \item Page 69 \#'s 2.74, 2.75, 2.79, 2.82, 2.84, 2.87, 2.90, 2.92
 \end{itemize}
+
 
 
 
