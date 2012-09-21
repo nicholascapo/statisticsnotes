@@ -277,8 +277,7 @@ Y: & \texttt{\py{data}}\\
 \caption{Example Scatter Plot}
 \end{figure}
 
-\section{Homework}
-\label{Chapter 1 Homework}
+\subsection{Homework}
 \begin{itemize}
 \item Page 13 \#'s 1.5, 1.6
 \item Page 17 \#'s 1.11, 1.12
@@ -379,8 +378,7 @@ If an experiment can result in any one of $N$ different equally likely outcomes,
 $$P(A \cup B) = P(A) + P(B) - P(A \cap B)$$
 
 %%%%%%%%%
-\section{Homework}
-\label{Chapter 2 Homework}
+\subsection{Homework}
 \begin{itemize}
 \item Page 42 \#'s 2.3, 2.6, 2.10, 2.11, 2.14, 2.16, 2.18
 \item Page 51 \#'s 2.24, 2.25, 2.28, 2.29, 2.30, 2.33, 2.34, 2.38, 2.39, 2.40, 2.44, 2.46, 2.47, 2.48
@@ -425,14 +423,58 @@ If $A$ and $B$ are independent events so are the complements of these events, th
 If, in an experiment, the events $A_1, A_2 \cdots A_k$ can occur, then
 $$P(A_1 \cap A_2 \cap \cdots \cap A_k) = P(A_1) \times P(A_2|A_1) \times P(A_3|A_1 \cap A_2) \times \cdots \times P(A_k |  A_1 \cap A_2 \cap \cdots \cap A_{k-1})$$
 
-\section{Homework}
+\subsection{Homework}
 \begin{itemize}
 \item Page 69 \#'s 2.74, 2.75, 2.79, 2.82, 2.84, 2.87, 2.90, 2.92
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Bayes' Rule}
 
+\subsection{Partitioning the Sample Space}
+A sample space $A$ can be partitioned into an arbitrary number of subsets. For partitions $B_1, B_2, B_3$ then $$A = (B_1 \cap A) \cup (B_2 \cap A) \cup \cdots \cup (B_3 \cap A)$$
 
+\subsection{Theorem of Total Probability}
+$$P(A) = \sum_{i=1}^k P(B_i \cap A) = \sum_{i=1}^k P(B_i)P(A|B_i)$$
 
+\subsection{Bayes Rule}
+$$P(B_i|A) 
+= \frac{P(B_i \cap A)}{\sum_{i=0}^k P(B_i \cap A)} 
+= \frac{P(B_i \cap A)}{\sum_{i=0}^k P(B_i)P(A|B)}$$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Random Variables and Probability Distribution}
+
+\section{Concept of a Random Variable}
+
+\subsection{Definition}
+A random variable, denoted $X$, is a function that associates a real number with each element in the sample space.
+
+\subsection{Discrete Sample Space}
+If a sample space contains a finite number of possibilities or an unending sequence with as many elements as there are whole numbers, it is called a \emph{discrete sample space}.
+
+A random variable corresponding with a discrete sample space is called a \emph{discrete random variable}.
+
+\section{Continuous Sample Space}
+If a sample space contains an infinite number of possibilities equal to the number of points on a line segment, it is called a \emph{continuous sample space}.
+
+A random variable corresponding with a continuous sample space is called a \emph{continuous random variable}.
+
+\section{Discrete Probability Distribution}
+The set of ordered pairs $(x, f(x))$ is a \emph{probability function}, \emph{probability mass function}, or \emph{probability distribution} of the discrete random variable $X$ if, for each possible outcome $x$, 
+\begin{enumerate}
+\item $f(x) \ge 0$
+\item $\sum_x f(x) = 1$
+\item $P(X = x) = f(x)$
+\end{enumerate}
+\note{Probabilities are Functions!} 
+
+\subsection{Homework}
+\begin{itemize}
+\item Page 77 \#'s 2.96, 2.97, 2.99, 2.100 Page 91 \#'s 3.1, .32
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \nocite{textbook}
 \printbibliography
