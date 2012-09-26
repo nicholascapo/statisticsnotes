@@ -443,7 +443,7 @@ $$P(B_i|A)
 = \frac{P(B_i \cap A)}{\sum_{i=0}^k P(B_i)P(A|B)}$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Random Variables and Probability Distribution}
+\chapter{Random Variables}
 
 \section{Concept of a Random Variable}
 
@@ -469,9 +469,28 @@ The set of ordered pairs $(x, f(x))$ is a \emph{probability function}, \emph{pro
 \end{enumerate}
 \note{Probabilities are Functions!} 
 
+\subsection{Cumulative Distribution Function}
+
+The Cumulative Distribution Function $F(x)$ of a discrete random variable$X$ with probability distribution $f(x)$ is
+$$F(x)=P(X \le x) = \sum_{t\le x}F(t)\text{, for } -\infty < x < \infty$$
+
+\note{This keeps a running total of the cumulative probabilities up to a value}
+
+\section{Continuous Random Variables}
+
+\subsection{}
+The function $f(x)$ is called a probability density function or pdf for the continous random variable $X$, defined over the set of real numbers, if
+\begin{enumerate}
+\item $$F(x) \ge 0 \text{, for all } x \in R$$
+\item $$\int_{-\infty}^{\infty}f(x) \text{dx} = 1$$
+\item $$P(a < X < b) = \int_a^b f(x) \text{dx}$$
+\end{enumerate}
+\note{$P(X=c)=0$, where $a \le c \le b$}
+
 \subsection{Homework}
 \begin{itemize}
 \item Page 77 \#'s 2.96, 2.97, 2.99, 2.100 Page 91 \#'s 3.1, .32
+\item Page 91 \#'s 3.1, 3.2, 3.5, 3.10, 3.11, 3.12, 3.25
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
