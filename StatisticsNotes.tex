@@ -478,8 +478,8 @@ $$F(x)=P(X \le x) = \sum_{t\le x}F(t)\text{, for } -\infty < x < \infty$$
 
 \section{Continuous Random Variables}
 
-\subsection{}
-The function $f(x)$ is called a probability density function or pdf for the continous random variable $X$, defined over the set of real numbers, if
+\subsection{Probability Density Function}
+The function $f(x)$ is called a probability density function or pdf for the continuous random variable $X$, defined over the set of real numbers, if
 \begin{enumerate}
 \item $$F(x) \ge 0 \text{, for all } x \in R$$
 \item $$\int_{-\infty}^{\infty}f(x) \text{dx} = 1$$
@@ -492,6 +492,32 @@ The function $f(x)$ is called a probability density function or pdf for the cont
 \item Page 77 \#'s 2.96, 2.97, 2.99, 2.100 Page 91 \#'s 3.1, .32
 \item Page 91 \#'s 3.1, 3.2, 3.5, 3.10, 3.11, 3.12, 3.25
 \end{itemize}
+
+\subsection{Cumulative Distribution Function}
+The Cumulative Distribution Function $F(x)$ of a continuous random variable $X$ with density function $f(x)$ is
+$$F(x) = P(X \le x) = \int_{-\infty}^x f(t) \text{ dt, for } -\infty < x < \infty$$
+
+\note{$P(a<X<b)=F(a)-F(b)$}
+\note{$f(x)=F'(x)$}
+
+\section{Joint Probability Distributions}
+
+\subsection{Probability Mass Functions}
+The function $f(x,y)$ is a Joint Probability Function or Probability Mass Function of the discrete random variables $X$ and $Y$ if
+\begin{enumerate}
+\item $$f(x,y) \ge 0 \text{ for all } (x,y)$$
+\item $$\sum_x\sum_y f(x,y) =1 $$
+\item $$P(X=x, Y=y)=f(x,y)$$
+\item For any region $A$ in the $xy$ plane, $$P((X,Y) \in A) = \sum_A\sum f(x,y)$$
+
+\end{enumerate}
+
+\subsection{Homework}
+\begin{itemize}
+\item Page 91 \#'s 3.17, 3.27, 3.30, 3.31, 3.33, 3.35, 3.37, 3.38, 3.44
+\end{itemize}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
