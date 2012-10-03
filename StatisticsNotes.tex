@@ -487,6 +487,9 @@ The function $f(x)$ is called a probability density function or pdf for the cont
 \end{enumerate}
 \note{$P(X=c)=0$, where $a \le c \le b$}
 
+\subsection*{Joint}
+
+
 \subsection{Homework}
 \begin{itemize}
 \item Page 77 \#'s 2.96, 2.97, 2.99, 2.100 Page 91 \#'s 3.1, .32
@@ -500,9 +503,7 @@ $$F(x) = P(X \le x) = \int_{-\infty}^x f(t) \text{ dt, for } -\infty < x < \inft
 \note{$P(a<X<b)=F(a)-F(b)$}
 \note{$f(x)=F'(x)$}
 
-\section{Joint Probability Distributions}
-
-\subsection{Probability Mass Functions}
+\subsection{Joint Probability Mass Functions}
 The function $f(x,y)$ is a Joint Probability Function or Probability Mass Function of the discrete random variables $X$ and $Y$ if
 \begin{enumerate}
 \item $$f(x,y) \ge 0 \text{ for all } (x,y)$$
@@ -512,9 +513,43 @@ The function $f(x,y)$ is a Joint Probability Function or Probability Mass Functi
 
 \end{enumerate}
 
+\section{Joint Probability Distributions}
+he function $f(x,y)$ is a joint density function of the continuous random variables $X$ and $Y$ if
+\begin{enumerate}
+\item $$f(x,y) \ge 0 \text{, for all} (x,y)$$
+\item $$\int_{-\infty}^\infty \int_{-\infty}^\infty f(x,y) \text{dx dy} = 1$$
+\item $$P((X,Y) \in A) = \int_A \int f(x,y) \text{dx dy}$$
+\end{enumerate}
+
+\subsection{Marginal Distribution}
+The marginal distibution of $X$ alone $Y$ alone are 
+
+(for the discrete case)
+$$g(x) = \sum_y f(x,y) \text{  and  } h(y) = \sum_x f(x,y)$$
+
+(for the continuous case)
+$$g(x) = \int_{-\infty}^\infty f(x,y) \text{dy} \text{  and  } h(y) = \int_{-\infty}^\infty f(x,y) \text{dx}$$
+
+\note{Marginal distributions are probability distributions}
+
+Let $X$ and $Y$ be two random variables, sicrete or continuous. The conditional distribution of the random variable $Y$ given that $X=x$ is
+$$f(y|x) = \frac{f(x,y)}{g(x)} \text{, provided } g(x) > 0$$
+
+Similarly, the conditional distribution of the random variable $X$ given that $Y=y$ is
+$$f(y|x) = \frac{f(x,y)}{h(y)} \text{, provided } h(y) > 0$$
+
+Where $g(x)$ and $h(y)$ are the respective marginal distributions.
+
+\subsection{Statistical Independence}
+Let $X$ and $Y$ be two random variables, discrete or continuous, with joint probability distribution $f(x,y)$ and marginal distributions $g(x)$ and $h(y)$ respectively. The random variables $X$ and $Y$ are said to be statisticly independent if and only if
+$$f(x,y)=g(x)h(y)$$
+for all $(x,y)$ withing their range.
+
+
 \subsection{Homework}
 \begin{itemize}
 \item Page 91 \#'s 3.17, 3.27, 3.30, 3.31, 3.33, 3.35, 3.37, 3.38, 3.44
+\item [On Blackboard]
 \end{itemize}
 
 
