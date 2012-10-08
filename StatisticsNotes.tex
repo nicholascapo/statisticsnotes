@@ -509,7 +509,7 @@ he function $f(x,y)$ is a joint density function of the continuous random variab
 \end{enumerate}
 
 \subsection{Marginal Distribution}
-The marginal distibution of $X$ alone $Y$ alone are 
+The marginal distribution of $X$ alone $Y$ alone are 
 
 (for the discrete case)
 $$g(x) = \sum_y f(x,y) \text{  and  } h(y) = \sum_x f(x,y)$$
@@ -520,7 +520,7 @@ $$g(x) = \int_{-\infty}^\infty f(x,y) \text{dy} \text{  and  } h(y) = \int_{-\in
 \note{Marginal distributions are probability distributions}
 
 \section{Joint PDFs}
-Let $X$ and $Y$ be two random variables, sicrete or continuous. The conditional distribution of the random variable $Y$ given that $X=x$ is
+Let $X$ and $Y$ be two random variables, discrete or continuous. The conditional distribution of the random variable $Y$ given that $X=x$ is
 $$f(y|x) = \frac{f(x,y)}{g(x)} \text{, provided } g(x) > 0$$
 
 Similarly, the conditional distribution of the random variable $X$ given that $Y=y$ is
@@ -542,18 +542,69 @@ for all $(x,y)$ withing their range.
 \chapter{Mean of a Random Variable}
 
 \section{Mean of a Random Variable}
-Let $X$ be a random variable with probability distrobution $f(x)$. The mean, or expected value, of $X$ is:
+Let $X$ be a random variable with probability distribution $f(x)$. The mean, or expected value, of $X$ is:
 
-Discrete Case:
+Discrete:
 	$$\mu = E(X) = \sum_x x f(x)$$ 
 
-Continuous Case:
+Continuous:
 	$$\mu = E(X) = \int_{=\infty}^\infty x f(x) \text{dx}$$
 
 
+\subsection{Expected Values of Functions of Random Variables}
+
+Let $X$ be a random variable with pdf $f(x)$. The expected value of the random variable $g(X)$ is
+
+Discrete:
+$$E(g(X))=\sum_x g(x)f(x)$$
+
+Continuous:
+$$E(g(X))=\int_{-\infty}^\infty g(x)f(x)$$
+
+\subsection{Expected Values of Joint distributions}
+Let $X$ and $Y$ be random variables with joint probability distribution $f(x,y)$. The mean, or expected value, of a random random variable $g(x,y)$ id
+
+Discrete:
+$$\mu_{g(x,y)}=E[g(x,y)] = \sum_X \sum_Y g(x,y)f(x,y)$$
+
+Discrete:
+$$\mu_{g(x,y)}=E[g(x,y)] = \int_{-\infty}^\infty \int_{-\infty}^\infty g(x,y)f(x,y)$$
+
+\section{Variance and Covariance of Random Variables}
+
+\subsection{Variance/Standard Deviation}
+
+Variance/Standard Deviation is a measure of the typical (average) amount the value deviates from the mean.
+
+The further the values are from the mean, the grater the variance/standard variation. 
+
+\subsection{Variance of a Random Variable}
+Let $X$ be a random variable with probability distribution $f(x)$ and mean $\mu$. The variance of $X$ is 
+
+Discrete:
+$$\sigma^2=E[(X-\mu)^2]=\sum_x(x-\mu)^2 f(x)$$
+
+$$\sigma^2=E[(X-\mu)^2]=\int_{-\infty}^\infty (x-\mu)^2 f(x)$$
+
+\subsubsection{Standard Variation}
+
+$$\sigma = \sqrt{\sigma^2} = \sqrt{E((X-\mu)^2)}$$
+
+\begin{itemize}
+\item Variance --- In terms of the mean's unit squared
+\item Standard Deviation --- Terms of the mean's unit
+\item It does not makes sense to add or subtract the variance and the mean
+\item It does not make sense to add or subtract the standard deviation and the mean
+\end{itemize}
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
 \chapter{Homework}
 \section{Homework Set 1}
@@ -601,6 +652,7 @@ Page & Problem Numbers\\
 \begin{tabular}{r|l}
 Page & Problem Numbers\\
 \hline
+See Blackboard\\
 See Blackboard\\
 \end{tabular}
 
