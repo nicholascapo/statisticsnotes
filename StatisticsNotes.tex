@@ -597,10 +597,49 @@ $$\sigma = \sqrt{\sigma^2} = \sqrt{E((X-\mu)^2)}$$
 \item It does not make sense to add or subtract the standard deviation and the mean
 \end{itemize}
 
+\subsection{Variance of a Random Variable}
+The variance of a Random Variable $X$ is
+$$\sigma^2 = E(X^2)-\mu^2$$
 
+\subsection{The Epirical Rule}
+for data with a (symmetric) bell-shaped distribution,
+\begin{itemize}
+\item $P[(\mu -\sigma) < X < (\mu + \sigma)] \approx 68\%$
+\item $P[(\mu -2\sigma) < X < (\mu + 2\sigma)] \approx 95\%$
+\item $P[(\mu -3\sigma) < X < (\mu + 3\sigma)] \approx 99.7\%$
+\end{itemize}
 
+\subsection{Chebyshev's Theorem}
 
+The probability that any random variable $X$ will assume a value within $k$ standard deviations of the mean is at least $1-\frac{1}{k^2}$. That is,
+$$P[(\mu - k\sigma) < X < (\mu + k\sigma)] \ge 1 - \frac{1}{k^2}$$
 
+\subsection{Variance of a Function of a Random Variable}
+Let $X$ be a random variable with probability distribution $f(x)$. The variance of the random variable $g(X)$ is
+
+Discrete:
+$$\sigma^2_{g(X)} = E\{[g(X) - \mu_{g(X)}]^2\} = \sum_x [g(x) - \mu_{g(X)}]^2 f(x)$$
+
+Continuous:
+$$\sigma^2_{g(X)} = E\{[g(X) - \mu_{g(X)}]^2\} = \int_{-\infty}^\infty [g(x) - \mu_{g(X)}]^2 f(x) \text{dx}$$
+
+\subsection{Alternative Form of Variance}
+$$\sigma^2 = E[[g(x)]^2]-\mu^2_{g(x)}$$
+
+\subsection{Covariance of $X$ and $Y$}
+Let $X$ and $Y$ be random variable with joint pdf  $f(x,y)$. The covariance of $X$ and $Y$ is
+
+Discrete:
+$$\sigma_{XY} = E[(X-\mu x)(Y-\mu y)]=\sum_X \sum_Y (x-\mu x)(y-\mu y) f(x,y)$$
+
+Continuous:
+$$\sigma_{XY} = E[(X-\mu x)(Y-\mu y)]=\int_{-\infty}^\infty \int_{-\infty}^\infty (x-\mu x)(y-\mu y) f(x,y) \text{dx dy}$$
+
+\subsection{Alternate Form}
+$$\sigma_{XY}=E(XY) - \mu x \mu y$$
+
+\subsection{Description of Covariance}
+\textbf{[See Slide 4 -- 26]}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -652,8 +691,8 @@ Page & Problem Numbers\\
 \begin{tabular}{r|l}
 Page & Problem Numbers\\
 \hline
-See Blackboard\\
-See Blackboard\\
+?? & 3.53, 3.55, 3.58, 3.59, 3.60, 4.1, 4.2, 4.5, 4.7\\
+?? & 4.10, 4.11, 4.13, 4.18, 4.19, 4.24, 4.28, 4.30, 4.34, 4.35, 4.49\\
 \end{tabular}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
