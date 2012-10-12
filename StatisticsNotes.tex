@@ -636,10 +636,57 @@ Continuous:
 $$\sigma_{XY} = E[(X-\mu x)(Y-\mu y)]=\int_{-\infty}^\infty \int_{-\infty}^\infty (x-\mu x)(y-\mu y) f(x,y) \text{dx dy}$$
 
 \subsection{Alternate Form}
-$$\sigma_{XY}=E(XY) - \mu x \mu y$$
+$$\sigma_{XY}=E(XY) - \mu_x \mu_y$$
 
 \subsection{Description of Covariance}
 \textbf{[See Slide 4 -- 26]}
+
+\subsection{Correlation Coefficient}
+The correlation coefficient is a unit free measure of the strength of the linear relationship between two variables
+
+Let $X$ and $Y$ be random variables with covariance $\sigma_{XY}$, and standard deviations $\sigma_X$ and $\sigma_Y$ respectively. The correlation coefficient of X and Y is
+
+$$\rho _{XY} = \frac{\sigma_{XY}}{\sigma_X \sigma_Y}$$
+
+For $-1 \le \rho \le 1$
+
+
+\section{Linear Combinations of Random Variables}
+
+\subsection{Expected Value of a Sum or Difference of Functions}
+The expected value of the sum or difference of two or more functions of a random variable X is the sum or difference of the expected values of the functions. That is,
+
+$$E[g(X) \pm h(X)] = E[g(X)] \pm E[h(X)].$$
+
+\subsection{Properties of Expected Values}
+
+\begin{itemize}
+\item Where $k$ is a constant, and $X$ and $Y$ are Random Variables
+\item $E(k)=k$
+\item $E(kX)=kE(X)$
+\item Example:
+	$E(3X+5Y+2)=3E(X)+5E(Y)+2$
+\end{itemize}
+
+\subsection{}
+Let $X$ and $Y$ be independent random variables. Then
+
+$$E(XY)=E(X)E(Y)$$
+\note{The inverse does not hold}
+
+\subsection{}
+If $X$ and $Y$ are random variables with joint probability distribution $f(x,y)$ and $a$, $b$, $c$ are real constants then
+
+$$\sigma^2_{aX+bY+c}=a^2\sigma^2_X+b^2\sigma^2_Y+2ab\sigma_{XY}$$
+
+\subsubsection{Independent Covariance}
+If $X$ and $Y$ are independent random variables
+
+$$\sigma_{XY}=0$$
+
+\subsection{Piston Example}
+[See Slide 4--43]
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
