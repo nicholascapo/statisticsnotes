@@ -687,6 +687,64 @@ $$\sigma_{XY}=0$$
 \subsection{Piston Example}
 [See Slide 4--43]
 
+\chapter{Binomial and Multinomial Distributions}
+
+\section{Introduction}
+[Not included in these Notes]
+
+\section{Bernoulli Experiment}
+\begin{enumerate}
+\item The experiment is repeated for a fixed number of trials, where each trial is independent of other trials
+\item There are only two possible outcomes of interest: success ($S$) or failure ($F$)
+\item The probability of success $p$ is the same for each trial
+\item The random variable $X$ counts the number of successful trials
+\end{enumerate}
+
+\subsection{Probability Distribution}
+The probability of exactly $x$ successes in $n$ trials is
+$$P(X=x)={n \choose x} p^xq^{n-x}, x = 0,1,2,3, \cdots,n$$
+Where:
+\begin{description}
+\item [$n=$] number of trials
+\item [$p=$] probability of success
+\item [$q=$] ($1-p$) probability of failure
+\item [$x=$] number of successes in $n$ trials
+\item [$n-x=$] number of failures in $n$ trials
+\end{description}
+
+\subsubsection{Binomial PDF Function}
+Found in Calculator: Catalog $\rightarrow$ (F3) Flash Apps $\rightarrow$ \texttt{binomPdf(}
+
+\subsubsection{Binomial CDF Function}
+Found in Calculator: Catalog $\rightarrow$ (F3) Flash Apps $\rightarrow$ \texttt{binomCdf(}
+
+\subsubsection{Mean and Variance of Binomial Distribution}
+
+The mean and variance of the binomial distribution $b(x;n,p)$ are $\mu = np$ and $\sigma^2 = npq$.
+
+\subsection{Multinomial Distribution}
+
+Similar to binomial distribution, except the number of possible outcomes is more than two.
+
+$$P(X_1=x_1, X_2=x_2, \cdots X_k=x_k) = {n \choose x_1, x_2, x_3 \cdots x_n} p_1^{x_1}p_2^{x_2} \cdots p_n^{x_n}$$
+
+\begin{description}
+\item[$n=$] number of trials
+\item[$p_i=$] probability of the $i$\textsuperscript{th} outcome
+\item [$x_i = $] number of occurrences of the $i$\textsuperscript{th} outcome in $n$ trials
+\end{description}
+\note{${n \choose x_1, x_2, x_3} = \frac{n!}{x_1! \times x_2! \times x_3!}$}
+
+\section{Hypergeometric Distribution}
+
+\begin{enumerate}
+\item A random sample of size $n$ is selected without replacement from $N$ items. (dependent events)
+\item $k$ items are classified as successes and $N-k$ items as failures
+\item $x$ represents the number of successes in a random sample of size $n$
+\end{enumerate}
+
+\subsection{Hypergeometric Formula}
+$$P(X=x) = \frac{{k \choose x}{N-k \choose n-x}}{{N \choose n}}$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -742,6 +800,14 @@ Page & Problem Numbers\\
 117 & 4.10, 4.11, 4.13, 4.18, 4.19, 4.24, 4.28, 4.30, 4.34, 4.35, 4.49\\
 127 & 4.39, 4.41, 4.44,4.45,4.46, 4.75, 4.77\\
 \end{tabular}
+
+\section{Homework Set 7}
+\begin{tabular}{r|l}
+Page & Problem Numbers\\
+\hline
+[See Blackboard]
+\end{tabular}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
