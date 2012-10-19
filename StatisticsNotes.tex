@@ -747,6 +747,42 @@ $$P(X_1=x_1, X_2=x_2, \cdots X_k=x_k) = {n \choose x_1, x_2, x_3 \cdots x_n} p_1
 $$P(X=x) = \frac{{k \choose x}{N-k \choose n-x}}{{N \choose n}}$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Continuous Probability Distributions}
+
+\section{Continuous Uniform Distribution}
+
+Uniform: $f(x;A,B)=\frac{1}{B-A}\text{, }A \le x \le B$
+
+\subsection{Mean and Variance}
+the mean and average of the uniform distribution are
+$$\mu=\frac{A+B}{2}$$
+$$\sigma^2=\frac{(B-A)^2}{12}$$
+
+\section{Normal Distribution}
+
+Many Random Variables have distributions that can be approximated by a bell shaped curve.
+
+The Distribution Formula is
+$$n(x;\mu, \sigma) = \frac{1}{\sigma \sqrt{2\pi}}
+\text{ to the power of }{e}^{\frac{-1}{2\sigma^2}(x-\mu)^2}$$
+Where $-\infty < x < \infty$
+
+\subsection{Properties of Normal Distribution}
+\begin{enumerate}
+\item The mean median and mode are equal
+\item The normal curve approaches, but does not touch the $x$-axis. That is: Horizontal Asptote at $y=0$
+\item The line of symmetry gives the location of the mean.
+\item The inflection points provides a way to estimate the standard deviation from the graph
+\end{enumerate}
+
+\subsection{The Standard Normal Distribution}
+The Standard Normal Distribution has a mean of 0 and a standard deviation of 1.
+
+\subsubsection{Calculator Help}
+Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ normCDF($x_\text{low}$, $x_\text{high}$, [$\mu$, $\sigma$])
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \appendix
