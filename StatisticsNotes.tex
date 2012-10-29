@@ -786,9 +786,71 @@ Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ normCDF($x_\text{low}$, $x_\
 Any $x$-value of a normal distribution can be transformed into a $z$-value in a standard normal distribution by
 $$z=\frac{x-\mu}{\sigma}$$
 
+
 \subsection{Probability and Normal Distributions}
 
 If a random variable $x$ is normally distributed, you can find the probability that $x$ will occur in a given interval by calculating the area under the normal curve for that interval.
+\addtocounter{section}{3}
+\section{Gamma and Exponential Distributions}
+
+The gamma and exponential distributions are distributions that are often used to model time to failure, waiting, times and between arrival times.
+
+\subsection{Gamma Function}
+The gamma function is defined by
+$$\Gamma(\alpha) = \int_0^\infty x^{\alpha -1}e^{-x} \text{dx, for } \alpha > 0$$
+
+If $\alpha$ is a positive integer then 
+$$\Gamma(n) = (n-1)!$$
+
+\subsection{Gamma Distribution}
+The continuous random variable $X$ has a gamma distribution, with parameters $\alpha$ and $\beta$, if its density function is given by 
+$$f(x;\alpha, \beta) = \left \{
+\begin{matrix}
+\frac{1}{\beta^\alpha\Gamma(\alpha)}x^{\alpha-1}e^{-x/\beta} &,& \text{ for } x >0\\
+0 &,& \text{ elsewhere }
+\end{matrix}
+\right.
+$$
+When $\alpha = 1$ the gamma distribution becomes the exponential distribution
+
+$$f(x, \beta) = \left \{
+\begin{matrix}
+\frac{1}{\beta}x^{\alpha-1}e^{-x/\beta} &,& \text{ for } x >0\\
+0 &,& \text{ elsewhere }
+\end{matrix}
+\right.
+$$
+Where $\alpha > 0$  and $\beta >0$
+\subsection{Mean and Variance}
+\subsubsection{Gamma}
+$$\mu=\alpha \beta$$
+$$\sigma^2 = \alpha \beta^2$$
+
+\subsubsection{Exponential Distribution}
+$$\mu = \beta $$
+$$\sigma^2 = \beta^2$$
+$$\sigma = \beta$$
+
+
+\addtocounter{chapter}{1}
+\chapter{Sampling Distribution}
+\addtocounter{section}{2}
+\section{Sampling Distribution}
+The probability distribution of a statistic is called a sampling distribution. We are interested in the sampling distribution of the sample mean $\overline X$
+
+The probability distribution of the sample means is called the sampling distribution of the sample mean.
+
+\subsection{Properties of Sampling Distributions of Sample Means}
+\begin{enumerate}
+\item The mean of the sample means, $\mu_{\overline x}$ is equal to the population mean $\mu$.
+\item The standard deviation of the sample means $\sigma_{\overline x}$
+is equal to the population standard deviation  $\sigma$ divided by the square root of the sample size $n$.
+$$\sigma_{\overline x} = \frac{\sigma}{\sqrt{n}}$$
+This is called the standard error of the mean.
+\end{enumerate}
+
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
