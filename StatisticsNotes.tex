@@ -849,8 +849,28 @@ $$\sigma_{\overline x} = \frac{\sigma}{\sqrt{n}}$$
 This is called the standard error of the mean.
 \end{enumerate}
 
+\subsection{Central Limit Theorem}
+If $\overline X$ is the mean of a random sample of size $n$ taken from a population with mean $\mu$ and finite variance $\sigma^2$, then the limiting form of the distribution
+$$Z=\frac{\overline X - \mu}{\sigma/\sqrt{n}} \text{ as } n \rightarrow \infty$$
 
+In other words for sufficiently large $n$, the mean of a sample of size $n$ approximates the normal distribution with mean $\mu$ and standard deviation $\frac{\sigma}{\sqrt{n}}$
 
+\subsubsection{Minimum Sample Size}
+What is the minimum sample size needed for a \enquote{good} approximation?
+\begin{enumerate}
+\item If the population is normally distributed, the sample size can be any number.
+\item For non-normally distributed populations, a good rule of thumb is $n \ge 30$
+\end{enumerate}
+
+\subsection{}
+If independent samples of size $n_1$ and $n_2$ are drawn from two populations with means $\mu_1$ and $\mu_2$ and variances $\sigma_1^2$ and $\sigma_2^2$ respectively, then the sampling distribution of the differences of means $\overline X_1 - \overline X_2$, is approximately normally distributed with mean and variance given by,
+$$\mu_{\overline X_1-\overline X_2}=\mu_1 - \mu_2$$
+and
+$$\sigma^2_{\overline X_1-\overline X_2}=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$$
+Also note when adding as opposed to subtracting:
+$$\mu_{\overline X_1+\overline X_2}=\mu_1 + \mu_2$$
+and
+$$\sigma^2_{\overline X_1+\overline X_2}=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$$
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
