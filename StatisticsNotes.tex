@@ -872,6 +872,61 @@ $$\mu_{\overline X_1+\overline X_2}=\mu_1 + \mu_2$$
 and
 $$\sigma^2_{\overline X_1+\overline X_2}=\frac{\sigma_1^2}{n_1}+\frac{\sigma_2^2}{n_2}$$
 
+\section{Chi Squared Distribution}
+A special case of the Gamma distribution when $\alpha=\frac{v}{2}$ and $\beta=2$
+
+$$
+f(x;v) = \left \{ 
+\begin{matrix}
+\frac{1}{2^v/2 \Gamma(v/2)}x^{(v/2) - 1}e^{-x/2} & ,& x > 0\\
+0 & ,& \text{ else }\\
+\end{matrix}
+\right .
+$$
+
+\section{Sampling Distribution of $S^2$}
+
+If $S^2$ is the variance of the random sample of size $n$ from a \emph{normal} population having variance $\sigma^2$, the the statistic
+$$\chi^2=\frac{(n-1)S^2}{\sigma^2}$$
+
+Has a $\chi^2$ distribution with $v=n-1$ degrees of freedom.
+
+\subsubsection{Calculator Help}
+
+Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ Chi2CDF($x_\text{low}$, $x_\text{high}$, [degrees of freedom])
+
+Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ invChi2([1-area], [degrees of freedom])
+
+\section{$t$-Distribution}
+
+Let $Z$ be a standard normal random variable and $V$ be a chi-squared random variable with $v$ degrees of freedom. If $Z$ and $V$ are independent, then the distribution of the random variable $T$, where
+$$
+T=\frac{Z}{\sqrt{V/v}}
+$$
+is called a $t$-distribution with $v$ degrees of freedom.
+
+\subsection{Alternative Form}
+
+$$
+T=\frac{\overline{X}-\mu}{S/\sqrt{n}}
+$$
+ with $v=n-1$ degrees of freedom
+
+\subsection{Properties of $t$-distribution}
+
+\begin{enumerate}
+\item The total area under a $t$-curve is 1 or 100\%
+\item The mean, median, and mode are equal to zero
+\item As the degrees of freedom increase, the $t$-distribution approaches the standard normal distribution. After 30 degrees of freedom the $t$-distribution is very close to the standard normal $z$-distribution.
+\end{enumerate}
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
