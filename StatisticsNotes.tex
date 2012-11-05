@@ -920,6 +920,56 @@ $$
 \item As the degrees of freedom increase, the $t$-distribution approaches the standard normal distribution. After 30 degrees of freedom the $t$-distribution is very close to the standard normal $z$-distribution.
 \end{enumerate}
 
+\subsubsection{Calculator Help}
+
+Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ tCDF($x_\text{low}$, $x_\text{high}$, [degrees of freedom])
+
+Catalog $\rightarrow$ F3 (Flash Apps) $\rightarrow$ inv\_t(area, degrees of freedom)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{One and Two Sample Estimation Problems}
+
+A statistic $\hat{\Theta}$ is said to be an unbiased estimator of the parameter $\theta$ if 
+$$\mu_{\hat{\Theta}} = E(\hat{\Theta}) = \theta$$
+
+If we consider all possible estimators of some parameter $\theta$, the one with the smallest variance is called the most efficient estimator of $\theta$.
+
+\section{Notes}
+\begin{enumerate}
+\item The sample mean and median are both unbiased estimators of the population mean.
+The sample variance is an unbiased estimator of the population variance.
+
+\item The sample standard deviation is a \emph{biased} estimator of the population standard deviation.
+
+\item For normal populations, the sample mean is the most efficient estimator of the population mean
+\end{enumerate}  
+
+\section{Point Estimate for Population}
+A single value estimate for a population parameter
+Most unbiased point estimate of the population mean $\mu$ is the sample mean $\overline x $
+
+\section{Interval Estimate}
+An interval or range of values used to estimate a population parameter.
+
+\section{Confidence Intervals}
+A $(1-\alpha)$ confidence interval for the population mean $\mu$
+$$x-E < \mu < x+E \text{ where } E = z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+
+The probability that the confidence interval contains $\mu$ is $1-\alpha$
+
+\section{Margin of Error}
+The greatest possible distance between the point estimate and the value of the population parameter for a given level of confidence.
+Denoted by $$E = z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+This is sometimes called the maximum error of estimate or error tolerance.
+
+
+
+
+
+
+
+
+
 
 
 
