@@ -19,6 +19,7 @@
 \usepackage{graphicx}
 \usepackage[hyperref=true, backref=true, backend=bibtex8]{biblatex}
 \usepackage{csquotes}
+\usepackage{xfrac}
 \usepackage[pdftex, pdfusetitle, colorlinks, 
 		urlcolor=blue, 
 		filecolor=blue, 
@@ -938,9 +939,7 @@ If we consider all possible estimators of some parameter $\theta$, the one with 
 \begin{enumerate}
 \item The sample mean and median are both unbiased estimators of the population mean.
 The sample variance is an unbiased estimator of the population variance.
-
 \item The sample standard deviation is a \emph{biased} estimator of the population standard deviation.
-
 \item For normal populations, the sample mean is the most efficient estimator of the population mean
 \end{enumerate}  
 
@@ -953,21 +952,41 @@ An interval or range of values used to estimate a population parameter.
 
 \section{Confidence Intervals}
 A $(1-\alpha)$ confidence interval for the population mean $\mu$
-$$x-E < \mu < x+E \text{ where } E = z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+$$x-E < \mu < x+E \text{ where } E = z_{\sfrac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$$
 
 The probability that the confidence interval contains $\mu$ is $1-\alpha$
 
 \section{Margin of Error}
 The greatest possible distance between the point estimate and the value of the population parameter for a given level of confidence.
-Denoted by $$E = z_{\alpha/2}\frac{\sigma}{\sqrt{n}}$$
+Denoted by $$E = z_{\sfrac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$$
 This is sometimes called the maximum error of estimate or error tolerance.
 
+\subsection{Sample Size}
+Given a $(1-\alpha)$ confidence level and a margin of error $E$, the minimum sample size $n$ needed to estimate the population mean $\mu$ is 
+$$n=\left ( \frac{z_{\sfrac{\alpha}{2}}\sigma}{E}\right )^2$$
+
+If $\sigma$ is unknown you can estimate it using $s$ provided you have a preliminary sample with at least 30 members.
+
+\section{9.8 Confidence Intervals for the Difference Between Means}
+
+\subsection{}
+If $\overline{x_1}$ and $\overline{x_2}$ are means of independent random samples of size $n_1$ and $n_2$ from populations with variances $\sigma_1^2$ and $\sigma_2^2$ respectively. Then a $(1-\alpha)$ confidence interval for $\mu_1 - \mu_2$ is given by
+
+$$(\overline{x_1} - \overline{x_2}) - z_{\sfrac{\alpha}{2}} \sqrt{\frac{\sigma_1^2}{n_1} + \frac{\sigma_2^2}{n_1}}$$
 
 
+\section{Confidence Intervals for Proportions}
 
+\subsection{Population proportion}
+The probability of success in a single trial of a binomial experiment
 
+The proportion of successes in a sample is denoted by
+$$\hat{p} = \frac{x}{n} = \frac{\text{successes}}{\text{sample size}}$$
 
-
+\subsection{Confidence Interval for Proportion}
+$$[\hat{p}-E, \hat{p}-E]$$
+Where $$E=z_c \sqrt{\frac{\hat{p}\hat{q}}{n}}\text{ and } \hat{q} = 1 - \hat{p}$$
+If $$n\hat{p} \ge 5 \text{ and } n\hat{q} \ge 5 $$
 
 
 
