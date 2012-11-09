@@ -988,6 +988,13 @@ $$[\hat{p}-E, \hat{p}-E]$$
 Where $$E=z_c \sqrt{\frac{\hat{p}\hat{q}}{n}}\text{ and } \hat{q} = 1 - \hat{p}$$
 If $$n\hat{p} \ge 5 \text{ and } n\hat{q} \ge 5 $$
 
+\subsection{Sample Size}
+Given a $(1-\alpha)$ confidence level and a margin or error $E$, the minimum sample size $n$ needed to estimate $p$ is
+$$n=\hat{p}\hat{q}\left ( \frac{z_{\sfrac{\alpha}{2}}}{E} \right )^2$$
+
+This assumes you have an estimate for $\hat{p}$ and $\hat{q}$, if not set $\hat{p}=\hat{q}=0.5$ this gives an upper bound for the error.
+
+\section{Estimating the Difference between Two Points}
 
 
 
