@@ -994,12 +994,53 @@ $$n=\hat{p}\hat{q}\left ( \frac{z_{\sfrac{\alpha}{2}}}{E} \right )^2$$
 
 This assumes you have an estimate for $\hat{p}$ and $\hat{q}$, if not set $\hat{p}=\hat{q}=0.5$ this gives an upper bound for the error.
 
-\section{Estimating the Difference between Two Points}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\chapter{Statistical Hypothesis}
 
+\section{Hypothesis Testing}
+\begin{description}
+\item[A Hypothesis Test] is a process that uses a sample statistic to test a claim about the value of a population parameter.
+\item[A Statistical Hypothesis] is an assertion or conjecture concerning one or more populations.
+\item[Null Hypothesis] $H_0$
+	\begin{enumerate}
+	\item Initially assumed to be true
+	\item A statistical hypothesis that contains statements of equality ($=, \le, \ge$)
+	\end{enumerate}
+\item[Alternative Hypothesis]
+	\begin{enumerate}
+	\item Hypothesis to be proved
+	\item A statement of inequality (using $\ne, >, <$)
+	\item Must be true if $H_0$ is false
+	\end{enumerate}
+\end{description}
 
+\subsection{Stating A Hypothesis}
+To write a null or alternative hypothesis, translate the claim made about the population parameter from a verbal statement to a mathematical statement.
 
+Regardless of which pair of hypothesis you use, you always assume that $\mu = k$ and examine the sampling distribution on the basis of that assumption.
 
+\section{Level of Significance}
+You must make a decision to reject or fail to reject the null hypothesis. However you may end up rejecting the null hypothesis when it is true!
+
+the maximum allowable probability of rejecting a true null hypothesis is called the level of significance, and is denoted $\alpha$. Commonly used levels of significance are $\alpha = 0.10$, $\alpha = 0.05$, $\alpha = 0.01$, 
+
+\section{Method 1}
+\begin{enumerate}
+\item For a given level of significance $\alpha$, construct an interval based on the value of $\mu$.
+\item Two sided test:
+$$\mu - E < \overline{x} < \mu + E \text{ where } E=z_{\sfrac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$$
+\note{This is slightly different than confidence intervals since here $\overline{x}$ is in the middle of the interval}
+
+\item There is a probability of $1-\alpha$ that a sample mean from the population will fall in this interval if the population mean is $\mu$
+\begin{enumerate}
+\item Calculate the sample mean from the population data. 
+\item Reject the null hypothesis if the sample mean falls outside of the interval at that level of significance
+\end{enumerate}
+\item The region outside the interval is called the rejection region or critical region.
+\end{enumerate}
+
+\section{Method 2}
 
 
 
